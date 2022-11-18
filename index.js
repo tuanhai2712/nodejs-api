@@ -1,7 +1,7 @@
-const express = require("express");
-
-const app = express();
+import express from "express";
+import router from "./router/index.js";
+export const app = express();
 app.use(express.json());
-require("./routes")(app);
+router();
 
 app.listen(5000, () => console.log("auth running"));
